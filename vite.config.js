@@ -5,7 +5,7 @@ import svgr from 'vite-plugin-svgr';
 export default defineConfig({
 
   //repo name 
-  base: '/movienight/',
+  base: '/movieNight/',
 
   plugins: [ react(), svgr()],
 });
