@@ -1,0 +1,86 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100dvh;
+  background: var(--body_background);
+  color: var(--body_color);
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* prevent horizontal scroll on all devices */
+}
+   
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+   
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.movie_list_header,
+.movie_cards {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 16px; /* equal left/right */
+}
+   
+#root,
+.app {
+  width: 100%;
+  min-height: 100dvh;
+}
+   
+.wrap-anywhere {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+   
+.align_center {
+  display: flex;
+  align-items: center;
+}
+   
+.btn,
+a,
+.movie_card,
+.navbar a {
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+   
+@font-face {
+  font-family: "Montserrat";
+  src: url(./assets/fonts/Montserrat-VariableFont_wght.woff2);
+}
+   
+:root {
+  --body_background: #101010;
+  --body_color: #fff;
+  --heading_color: #74b3eb;
+}
+   
+[data-theme="light"] {
+  --body_background: #fff;
+  --body_color: #000;
+  --heading_color: #000;
+}
+
+@media (min-width: 700px) and (max-width: 1200px) {
+  html,
+  body,
+  #root,
+  .app,
+  main,
+  .container,
+  .movienight {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+   
